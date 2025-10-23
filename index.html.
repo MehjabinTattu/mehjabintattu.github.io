@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mehjabin Tattu — Data Analyst Portfolio</title>
+  <meta name="description" content="Mehjabin Tattu — Master of Data Analytics student. Portfolio: Data Science, BI, Optimization." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#0f1720; --muted:#9aa4b2; --accent:#6ee7b7; --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#050608 0%, var(--bg) 100%);color:#e6eef6;font-family:Inter,system-ui,Arial,sans-serif}
+    .container{max-width:1100px;margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:84px;height:84px;border-radius:14px;background:linear-gradient(135deg,#12202b,#0b2330);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:28px}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .buttons{margin-top:14px;display:flex;gap:12px}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--accent);text-decoration:none;font-weight:600}
+    .btn.secondary{color:var(--muted);border-color:rgba(255,255,255,0.03)}
+
+    /* grid */
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+    main{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:20px;border-radius:14px}
+    aside{position:sticky;top:28px;background:var(--card);padding:18px;border-radius:12px}
+
+    /* project card */
+    .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:8px;background:#071018}
+    .card h3{margin:10px 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+    .card a{display:inline-block;margin-top:10px;color:var(--accent);text-decoration:none;font-weight:600}
+
+    /* about */
+    .about{display:flex;flex-direction:column;gap:8px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .skill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:13px;color:var(--muted)}
+
+    footer{margin-top:34px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media(max-width:920px){.grid{grid-template-columns:1fr}.avatar{width:64px;height:64px}.container{padding:18px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">MT</div>
+      <div>
+        <h1>Mehjabin Tattu</h1>
+        <p class="lead">Master of Data Analytics • Data Science, Business Intelligence & Optimization</p>
+        <div class="buttons">
+          <a class="btn" href="#projects">View My Projects</a>
+          <a class="btn secondary" href="/MehjabinTattu_resume.pdf" target="_blank">Download Resume</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section id="about">
+          <h2>About</h2>
+          <div class="about">
+            <p>I'm a Master of Data Analytics student at the University of Niagara Falls (2026). I work at the intersection of analytics, optimization and visualization — turning raw data into actionable, business-focused insights. My experience includes predictive modeling, reinforcement learning experiments, MILP optimization and dashboarding with Tableau & Power BI.</p>
+            <div class="skills">
+              <span class="skill">Python</span>
+              <span class="skill">Pandas</span>
+              <span class="skill">NumPy</span>
+              <span class="skill">Scikit-learn</span>
+              <span class="skill">SQL</span>
+              <span class="skill">Tableau</span>
+              <span class="skill">Power BI</span>
+              <span class="skill">OR-Tools</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" style="margin-top:22px">
+          <h2>Projects</h2>
+          <div class="projects">
+
+            <article class="card">
+              <img src="assets/images/stock_dashboard.png" alt="Stock Dashboard preview">
+              <h3>📈 Stock Performance & Volatility Analysis</h3>
+              <p>Time-series analysis of Canadian entertainment firms using OLS, ARIMA & GARCH. Interactive Tableau dashboard for comparative analysis.</p>
+              <a href="https://github.com/MehjabinTattu/Stock-Performance-Analysis" target="_blank">View on GitHub →</a>
+            </article>
+
+            <article class="card">
+              <img src="assets/images/qlearning.png" alt="Q-learning preview">
+              <h3>🚗 Q-Learning Surge Pricing Model</h3>
+              <p>Reinforcement Learning agent for dynamic pricing; compared RL outcomes with optimization approaches and visualized results in Power BI.</p>
+              <a href="https://github.com/MehjabinTattu/Q-Learning-Surge-Pricing" target="_blank">View on GitHub →</a>
+            </article>
+
+            <article class="card">
+              <img src="assets/images/hospital_dashboard.png" alt="Hospital Dashboard preview">
+              <h3>🏥 Hospital Performance Exploration</h3>
+              <p>Tableau dashboards for hospital benchmarking — analyzing ownership, region and quality metrics to uncover patterns and outliers.</p>
+              <a href="https://github.com/MehjabinTattu/Hospital-Performance-Exploration" target="_blank">View on GitHub →</a>
+            </article>
+
+            <article class="card">
+              <img src="assets/images/supply_chain.png" alt="Supply chain preview">
+              <h3>🏭 Global Supply Chain Optimization (MILP)</h3>
+              <p>MILP model optimizing a three-echelon network; reduced weekly cost by 3% and CO₂ emissions by 10% through network design.</p>
+              <a href="https://github.com/MehjabinTattu/Global-Network-Optimization" target="_blank">View on GitHub →</a>
+            </article>
+
+            <article class="card">
+              <img src="assets/images/credit_risk.png" alt="Credit risk preview">
+              <h3>💳 Credit Risk Analysis Dashboard</h3>
+              <p>Predictive modeling and Power BI dashboard to assess loan default risk — models include Logistic Regression, Random Forest & XGBoost.</p>
+              <a href="https://github.com/MehjabinTattu/Credit-Risk-Analysis-Dashboard-Power-BI-Python" target="_blank">View on GitHub →</a>
+            </article>
+
+            <article class="card">
+              <img src="assets/images/ai_salary.png" alt="Salary model preview">
+              <h3>🤖 AI Job Salary Prediction Model</h3>
+              <p>Salary prediction for AI roles using regression and tree-based models; dashboarded in Power BI for benchmarking and insights.</p>
+              <a href="https://github.com/MehjabinTattu/AI-Job-Salary-Prediction-Model-Python-Power-BI" target="_blank">View on GitHub →</a>
+            </article>
+
+            <article class="card">
+              <img src="assets/images/uber_analysis.png" alt="Uber analysis preview">
+              <h3>🚗 Uber Business Environment Analysis</h3>
+              <p>Operational analytics on trip demand, pricing, and regional performance; includes geospatial visuals and Power BI dashboards.</p>
+              <a href="https://github.com/MehjabinTattu/Uber-Business-Environment-Analysis-Python-Power-BI" target="_blank">View on GitHub →</a>
+            </article>
+
+          </div>
+        </section>
+
+        <footer>
+          <p>More projects on <a href="https://github.com/MehjabinTattu" target="_blank" style="color:var(--accent);text-decoration:none">GitHub</a> • Built with care ✨</p>
+        </footer>
+      </main>
+
+      <aside>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:10px">
+            <h3 style="margin:0 0 8px">Contact</h3>
+            <p style="margin:0;font-size:14px;color:var(--muted)">mehjabintattu@gmail.com</p>
+            <p style="margin:6px 0 0;font-size:14px;color:var(--muted)"><a href="https://www.linkedin.com/feed/" target="_blank" style="color:var(--accent);text-decoration:none">LinkedIn</a></p>
+          </div>
+
+          <div style="padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)">
+            <h3 style="margin:0 0 8px">Quick Stats</h3>
+            <p style="margin:0;color:var(--muted);font-size:14px">Master of Data Analytics (2026)</p>
+            <p style="margin:6px 0 0;color:var(--muted);font-size:14px">Based in Canada</p>
+          </div>
+
+          <div style="padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)">
+            <h3 style="margin:0 0 8px">Resume</h3>
+            <a class="btn" href="/MehjabinTattu_resume.pdf" style="display:inline-block">Download PDF</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+  </div>
+  <script>
+    // small enhancement: smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      })
+    })
+  </script>
+</body>
+</html>
